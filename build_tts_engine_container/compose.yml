@@ -1,0 +1,23 @@
+services:
+  lao_tts_api:
+
+    # Set the name of the container
+    container_name: lao_tts_engine_container
+
+    # Build the container using the DockerFile in the api folder
+    build:
+      context: ../lao_tts_engine
+      dockerfile: DockerFile
+    
+    # Set directory that will auto update the container when files change
+    # Using docker compose watch
+    develop:
+      watch:
+      - action: sync
+        path: lao_tts_engine
+        target: /tts_engine
+    # Expose the port of the container to the host
+    ports:
+      - 8501:8501
+    
+  
