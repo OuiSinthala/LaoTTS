@@ -1,3 +1,6 @@
+# Module
+/lao_tts_engine/module_config/
+
 # Python
 __pycache__/
 *.py[cod]
