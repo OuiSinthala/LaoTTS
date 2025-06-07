@@ -25,4 +25,4 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 COPY . .
 
 # Run the application.
-ENTRYPOINT ["streamlit", "run", "tts_lao.py"]
+ENTRYPOINT ["streamlit", "run", "main.py"]
